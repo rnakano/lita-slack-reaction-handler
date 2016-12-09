@@ -1,4 +1,4 @@
 en:
   lita:
-    adapters:
+    handlers:
       slack_reaction_handler:

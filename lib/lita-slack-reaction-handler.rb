@@ -4,4 +4,9 @@ Lita.load_locales Dir[File.expand_path(
   File.join("..", "..", "locales", "*.yml"), __FILE__
 )]
 
-require "lita/adapters/slack_reaction_handler"
+require "lita/handlers/slack_reaction_handler"
+
+Lita::Handlers::SlackReactionHandler.template_root File.expand_path(
+  File.join("..", "..", "templates"),
+ __FILE__
+)
