@@ -6,6 +6,7 @@ module Lita
       on :slack_reaction_added, :handle_reaction
 
       def handle_reaction(payload)
+        ReactionDispatcher.dispatch(payload)
       end
 
       Lita.register_handler(self)
